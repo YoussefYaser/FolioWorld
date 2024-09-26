@@ -1,0 +1,33 @@
+.rating-stars{
+    --star-size: 17px;
+    --default-color: #ffffff;
+    --star-color: gold;
+    --transition-star: 0.1s;
+    /* --------------------------------------- */
+    
+    width: fit-content;
+    font-size: var(--star-size);
+}
+
+.rating-stars span .full{
+    filter: drop-shadow(0 0 1px black);
+
+}
+
+.rating-stars span .half,
+.rating-stars span .full{
+    color: var(--default-color);
+    transition: var(--transition-star);
+    cursor: pointer;
+}
+
+.rating-stars span:hover ~ span .full, 
+.rating-stars span:hover ~ span .half, 
+.rating-stars span .half:hover,  
+.rating-stars span .full:hover,
+.rating-stars span .full:hover + .half
+{
+    color: var(--star-color);
+}
+
+
